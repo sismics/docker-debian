@@ -18,6 +18,6 @@ ENV LC_ALL C.UTF-8
 RUN echo "Europe/Paris" > /etc/timezone
 RUN dpkg-reconfigure tzdata
 COPY etc /etc
-RUN cat /etc/.bashrc_additional >> ~/.bashrc
+RUN echo "for f in \`ls /etc/bashrc.d/*\`; do . \$f; done;" >> ~/.bashrc
 RUN apt-get -y -q install vim less procps unzip wget && \
     rm -rf /var/lib/apt/lists/*
