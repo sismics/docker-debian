@@ -1,7 +1,7 @@
 #
 # Dockerfile for Debian
 #
-FROM debian:bullseye
+FROM debian:bookworm
 MAINTAINER Jean-Marc Tremeaux <jm.tremeaux@sismics.com>
 
 # Run Debian in non interactive mode
